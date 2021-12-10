@@ -1,8 +1,6 @@
 package models
 
-type album struct {
-	ID     string  `json:"id"`
-	Title  string  `json:"title"`
-	Artist string  `json:"artist"`
-	Price  float64 `json:"price"`
+type KeyValueRequest struct {
+	Key   string `json:"key"`
+	Value string `json:"value"`
 }

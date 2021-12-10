@@ -1,24 +1,34 @@
 package main
 
 import (
+	"keyValueProject/models"
+	"keyValueProject/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
+	service.InitKeyValueObject()
 	router := gin.Default()
-	router.GET("/albums", getAlbums)
+	router.GET("/keyValues", getKeyValues)
+	router.GET("/createKeyValue", createKeyValue)
 
 	router.Run("localhost:8080")
 }
 
-var albums = []models.album{
-	{ID: "1", Title: "Blue Train", Artist: "John Coltrane", Price: 56.99},
-	{ID: "2", Title: "Jeru", Artist: "Gerry Mulligan", Price: 17.99},
-	{ID: "3", Title: "Sarah Vaughan and Clifford Brown", Artist: "Sarah Vaughan", Price: 39.99},
+func getKeyValues(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, service.KeyValueObject)
 }
 
-func getAlbums(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, albums)
+func createKeyValue(c *gin.Context) {
+	var newKeyValue models.KeyValueRequest
+
+	// Call BindJSON to bind the received JSON to
+	if err := c.BindJSON(&newKeyValue); err != nil {
+		return
+	}
+
+	service.AddKeyValue(newKeyValue.Key, newKeyValue.Value)
+	c.IndentedJSON(http.StatusCreated, newKeyValue)
 }
