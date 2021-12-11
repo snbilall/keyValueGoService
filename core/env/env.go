@@ -8,7 +8,6 @@ import (
 
 type AppSettings struct {
 	Interval int
-	FilePath string
 	FileName string
 }
 
