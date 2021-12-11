@@ -30,7 +30,7 @@ func TestSuccessAddKeyValueService(t *testing.T) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	req, err := http.NewRequest(http.MethodPost, "/createKeyValue", &buf)
+	req, err := http.NewRequest(http.MethodPost, "/keyValues", &buf)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -49,7 +49,7 @@ func TestUnsuccessAddKeyValueService(t *testing.T) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	req, err := http.NewRequest(http.MethodPost, "/createKeyValue", &buf)
+	req, err := http.NewRequest(http.MethodPost, "/keyValues", &buf)
 	if err != nil {
 		fmt.Println(err)
 	}
