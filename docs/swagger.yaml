@@ -1,0 +1,81 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server key value service"
+  version: "1.0.0"
+  title: "Key Value Service"
+host: "petstore.swagger.io"
+basePath: "/v1"
+tags:
+- name: "keyValues"
+  description: "ket value services endopoints"
+schemes:
+- "http"
+paths:
+  /keyValues:
+    post:
+      tags:
+      - "keyValues"
+      summary: "Add a new key value pair"
+      description: ""
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Key value object that needs to be "
+        required: true
+        schema:
+          $ref: "#/definitions/KeyValue"
+      responses:
+        "201":
+          description: "Key value pair created"
+          schema:
+            $ref: "#/definitions/KeyValue"
+    get:
+      tags:
+      - "keyValues"
+      summary: "Get All key value pairs"
+      description: ""
+      operationId: "Key value pairs"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "get all key value pairs success"
+          schema:
+            $ref: "#/definitions/KeyValues"
+  /keyValues/{key}:
+    get:
+      tags:
+      - "keyValues"
+      summary: "Get value of key"
+      description: ""
+      operationId: "get value by key"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "key"
+        type: string
+        description: "Key value object that needs to be "
+        required: true
+      responses:
+        "200":
+          description: "get all key value pairs success"
+          schema:
+            type: string
+definitions:
+  KeyValue:
+    type: "object"
+    properties:
+      Key:
+        type: "string"
+      Value:
+        type: "string"
+        format: "int64"
+  KeyValues:
+    type: "array"
+    items:
+      $ref: '#/definitions/KeyValue'

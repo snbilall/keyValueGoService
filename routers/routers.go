@@ -7,7 +7,7 @@ import (
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	router.GET("/keyValues", getKeyValues)
-	router.POST("/createKeyValue", createKeyValue)
+	router.POST("/keyValues", createKeyValue)
 	router.GET("/keyValues/:key", getValueByKey)
 
 	return router
