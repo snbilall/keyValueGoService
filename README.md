@@ -50,13 +50,38 @@ Go to tests directory and run bash script below
 go test
 ```
 
+## Usage
+
+### Locally
+
+1. Clone repository:
+
+```
+git clone https://github.com/snbilall/keyValueGoService.git
+```
+![](https://raw.githubusercontent.com/cfpb/open-source-checklist/master/screenshot-scrub-success.png)
+
+2. Install project mod packages. In Terminal, from project root, run:
+```bash
+go run .
+```
+
+3. Install Postman app to your computer, run postman and import ![go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name not presence of 'heroku', send requests. enjoy!
+
+### On Heroku
+
+1. Install Postman app to your computeri run postman and import ![go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name presence of 'heroku', send requests. enjoy!
+
 ## Getting help
 
 Contact with me.
 
-**Example**
+## Future Work
 
-----
+1. Working with db
+2. Containerizing the app
+3. Send logs kibana or something else
+4. Make logging infasctucture better
 
 ## Open source licensing info
 1. [TERMS](TERMS.md)

@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "94e33b3d-ccb0-4bab-85a9-e9ba477ad05d",
+		"name": "go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/keyValues",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"keyValues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/keyValues/key1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"keyValues",
+						"key1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"key6\",\r\n    \"value\": \"value6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/keyValues",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"keyValues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "heroku getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://keyvaluegoservice.herokuapp.com/keyValues",
+					"protocol": "https",
+					"host": [
+						"keyvaluegoservice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"keyValues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "heroku get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://keyvaluegoservice.herokuapp.com/keyValues/key1",
+					"protocol": "https",
+					"host": [
+						"keyvaluegoservice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"keyValues",
+						"key1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "heroku create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"key7\",\r\n    \"value\": \"value7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://keyvaluegoservice.herokuapp.com/keyValues",
+					"protocol": "https",
+					"host": [
+						"keyvaluegoservice",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"keyValues"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
