@@ -2,6 +2,7 @@ package main
 
 import (
 	"keyValueProject/core/env"
+	"keyValueProject/core/logging"
 	"keyValueProject/routers"
 	"keyValueProject/service"
 )
@@ -11,6 +12,7 @@ func main() {
 	service.Init()
 	service.FetchValuesFromFile()
 	service.StartInterval()
+	logging.Init()
 
 	router := routers.SetupRouter()
 

@@ -8,7 +8,7 @@ git clone https://github.com/snbilall/keyValueGoService.git
 
 ----
 
-# Project Title
+# Key Value Go Service
 
 **Description**:  A Basic key value project. Gets key value values from client, saves data on memory. It saves memory data to a file in periodic interval. Gin library used to build web service.
 
@@ -22,6 +22,12 @@ Just run code below in root directory
 
 ```bash
 go run .
+```
+
+If you want to build app rn following commands
+```bash
+mkdir ./bin
+go build -o .\bin\
 ```
 
 ## Configuration
