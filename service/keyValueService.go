@@ -3,7 +3,6 @@ package service
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"keyValueProject/core/env"
 	"keyValueProject/models"
 	"os"
@@ -16,7 +15,6 @@ var filePath string
 
 func Init() {
 	filePath = os.TempDir() + string(os.PathSeparator) + env.AppSetting.FileName
-	fmt.Println(filePath)
 	if KeyValueObject == nil {
 		KeyValueObject = make(map[string]string)
 	}

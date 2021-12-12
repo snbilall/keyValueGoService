@@ -24,7 +24,7 @@ Just run code below in root directory
 go run .
 ```
 
-İf you want to build app rn following commands
+If you want to build app rn following commands
 ```bash
 mkdir ./bin
 go build -o .\bin\

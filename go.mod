@@ -6,6 +6,11 @@ go 1.17
 require github.com/gin-gonic/gin v1.7.7
 
 require (
+	github.com/rs/zerolog v1.26.0
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+)
+
+require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
