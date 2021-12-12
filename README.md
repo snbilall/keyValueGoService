@@ -58,19 +58,17 @@ go test
 
 ```
 git clone https://github.com/snbilall/keyValueGoService.git
-```
-![](https://raw.githubusercontent.com/cfpb/open-source-checklist/master/screenshot-scrub-success.png)
 
 2. Install project mod packages. In Terminal, from project root, run:
 ```bash
 go run .
 ```
 
-3. Install Postman app to your computer, run postman and import ![go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name not presence of 'heroku', send requests. enjoy!
+3. Install Postman app to your computer, run postman and import [go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name not presence of 'heroku', send requests. enjoy!
 
 ### On Heroku
 
-1. Install Postman app to your computeri run postman and import ![go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name presence of 'heroku', send requests. enjoy!
+1. Install Postman app to your computeri run postman and import [go.postman_collection.json](https://github.com/snbilall/keyValueGoService/blob/master/go.postman_collection.json) file. open request with name presence of 'heroku', send requests. enjoy!
 
 ## Getting help
 
